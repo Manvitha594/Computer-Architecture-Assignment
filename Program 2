@@ -1,0 +1,27 @@
+def left_shift(binary, positions):
+    print("Original binary number:", binary)
+    result = binary
+
+    for i in range(positions):
+        result = result[1:] + '0'
+        print("After left shift", i + 1, ":", result)
+
+    print("Final result:", result)
+    print()
+
+def right_shift(binary, positions):
+    print("Original binary number:", binary)
+    result = binary
+
+    for i in range(positions):
+        result = '0' + result[:-1]
+        print("After right shift", i + 1, ":", result)
+
+    print("Final result:", result)
+    print()
+
+print("Logical Left Shift")
+left_shift("10110110", 3)
+
+print("Logical Right Shift")
+right_shift("11010100", 3)
