@@ -1,0 +1,31 @@
+def binary(n):
+    return format(n & 255, '08b')
+
+def signed(n):
+    return n - 256 if n >= 128 else n
+
+def calculate(a, b, op):
+    x = a & 255
+    y = b & 255
+
+    if op == '+':
+        total = x + y
+        result = total & 255
+        overflow = ((~(x ^ y) & (x ^ result)) & 128) != 0
+    else:
+        result = (x - y) & 255
+        overflow = (((x ^ y) & (x ^ result)) & 128) != 0
+
+    print("Operand 1:", binary(x), "(", a, ")")
+    print("Operand 2:", binary(y), "(", b, ")")
+    print("Operation:", op)
+    print("Result in binary:", binary(result))
+    print("Result in decimal:", signed(result))
+    print("Overflow:", "Yes" if overflow else "No")
+    print()
+
+print("Expression 1: (120 + (+62))")
+calculate(120, 62, '+')
+
+print("Expression 2: ((-120) + (-62))")
+calculate(-120, -62, '+')
