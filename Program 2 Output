@@ -1,0 +1,13 @@
+Logical Left Shift
+Original binary number: 10110110
+After left shift 1 : 01101100
+After left shift 2 : 11011000
+After left shift 3 : 10110000
+Final result: 10110000
+
+Logical Right Shift
+Original binary number: 11010100
+After right shift 1 : 01101010
+After right shift 2 : 00110101
+After right shift 3 : 00011010
+Final result: 00011010
