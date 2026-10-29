@@ -1,0 +1,15 @@
+Expression 1: (120 + (+62))
+Operand 1: 01111000 ( 120 )
+Operand 2: 00111110 ( 62 )
+Operation: +
+Result in binary: 10110110
+Result in decimal: -74
+Overflow: Yes
+
+Expression 2: ((-120) + (-62))
+Operand 1: 10001000 ( -120 )
+Operand 2: 11000010 ( -62 )
+Operation: +
+Result in binary: 01001010
+Result in decimal: 74
+Overflow: Yes
